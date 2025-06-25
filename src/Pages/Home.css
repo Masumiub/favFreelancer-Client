@@ -1,0 +1,15 @@
+.headerSection {
+    background-image: url('../assets/bg2.png');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size:contain;
+
+}
+
+
+.solutionSection {
+    background-image: url('../assets/bg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

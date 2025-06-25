@@ -1,0 +1,80 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
+import MainLayout from './Layouts/MainLayout';
+import Home from './Pages/Home';
+import AddTask from './Pages/AddTask';
+import UpdateTask from './Pages/UpdateTask';
+import TaskDetails from './Pages/TaskDetails';
+import Signin from './Pages/Signin';
+import Signup from './Pages/Signup';
+import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Context/PrivateRoute';
+import BrowseTasks from './Pages/BrowseTasks';
+import MyTasks from './Pages/MyTasks';
+import ErrorPage from './Pages/ErrorPage';
+import ForgetPassword from './Pages/ForgetPassword';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    hydrateFallbackElement: <p className="text-center my-20"><span className="loading loading-spinner text-primary loading-xl"></span></p>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        index: true,
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks?limit=6&sort=deadline'),
+        Component: Home,
+      },
+      {
+        path: '/addTask',
+        element: <PrivateRoute><AddTask></AddTask></PrivateRoute> ,
+      },
+      {
+        path: 'tasks/:id',
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
+        element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute> ,
+      },
+      {
+        path: 'updateTask/:id',
+        loader: ({ params }) => fetch(`https://fav-freelancer-server.vercel.app/tasks/${params.id}`),
+        element:  <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
+      },
+      {
+        path: '/browseTasks',
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
+        Component: BrowseTasks,
+      },
+      {
+        path: '/myTasks',
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
+        element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
+      },
+      {
+        path: 'signin',
+        element: <Signin></Signin>
+      },
+      {
+        path: 'signup',
+        element: <Signup></Signup>
+      },
+      {
+        path: 'forgetPassword',
+        element: <ForgetPassword></ForgetPassword>
+      }
+    ]
+  },
+]);
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </StrictMode>,
+)
