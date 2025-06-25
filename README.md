@@ -5,7 +5,17 @@ favFreelancer is a platform that helps individuals find freelancers for small ta
 # Live Site Link
 https://favfreelancer-client.web.app/
 
+![Image](https://github.com/user-attachments/assets/2fb42fb5-5ee8-48b5-9f8a-954cae1c9389)
 
+![Image](https://github.com/user-attachments/assets/69431e91-0fcb-41aa-b790-eed65b11d6b4)
+
+![Image](https://github.com/user-attachments/assets/c219ef1b-74b5-410f-894b-1c00a7d58354)
+
+![Image](https://github.com/user-attachments/assets/a3769232-bb12-4ba7-9d6a-b5accdf6f3b3)
+
+![Image](https://github.com/user-attachments/assets/150ae02f-7e0c-41a5-b45f-01c54538c50d)
+
+![Image](https://github.com/user-attachments/assets/106375b6-6b88-4ab4-9119-d65981551d42)
 
 # Features:
 - Users can post task to find freelancers.
@@ -35,15 +45,10 @@ https://favfreelancer-client.web.app/
 - React Slick. 
 
 
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run Locally:
+- Download or clone the repo
+- Open with VS Code.
+- Navigate to the file.
+- Handle .env variables
+- Run : npm i
+- Run : npm run dev
