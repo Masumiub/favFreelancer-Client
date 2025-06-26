@@ -78,7 +78,7 @@ const UpdateTask = () => {
 
     return (
         <div>
-            <div className='mx-auto w-full md:w-6/12'>
+            <div className='w-full'>
 
                 <div className='flex flex-col md:flex-row items-center justify-between gap-10 mt-10'>
                     <div className='w-full  md:w-8/12'>
@@ -87,7 +87,7 @@ const UpdateTask = () => {
                     </div>
 
                     <div className='w-full md:w-4/12'>
-                        <img src={updateTaskPic} alt="browseTask" className='w-full' />
+                        <img src={updateTaskPic} alt="browseTask" className='w-full h-45' />
                     </div>
                 </div>
 

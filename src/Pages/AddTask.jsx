@@ -74,7 +74,7 @@ const AddTask = () => {
     }
 
     return (
-        <div className='mx-auto w-full md:w-6/12'>
+        <div className='mx-auto w-full'>
 
             <div className='flex flex-col md:flex-row items-center justify-between gap-10 mt-10'>
                 <div className='w-full  md:w-8/12'>
@@ -83,7 +83,7 @@ const AddTask = () => {
                 </div>
 
                 <div className='w-full md:w-4/12'>
-                    <img src={addTaskPic} alt="browseTask" className='w-full' />
+                    <img src={addTaskPic} alt="browseTask" className='w-full h-45' />
                 </div>
             </div>
 

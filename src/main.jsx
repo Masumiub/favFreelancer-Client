@@ -34,20 +34,20 @@ const router = createBrowserRouter([
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks?limit=6&sort=deadline'),
         Component: Home,
       },
-      {
-        path: '/addTask',
-        element: <PrivateRoute><AddTask></AddTask></PrivateRoute>,
-      },
+      // {
+      //   path: '/addTask',
+      //   element: <PrivateRoute><AddTask></AddTask></PrivateRoute>,
+      // },
       {
         path: 'tasks/:id',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
         element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>,
       },
-      {
-        path: 'updateTask/:id',
-        loader: ({ params }) => fetch(`https://fav-freelancer-server.vercel.app/tasks/${params.id}`),
-        element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
-      },
+      // {
+      //   path: 'updateTask/:id',
+      //   loader: ({ params }) => fetch(`https://fav-freelancer-server.vercel.app/tasks/${params.id}`),
+      //   element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
+      // },
       {
         path: '/browseTasks',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
@@ -84,9 +84,18 @@ const router = createBrowserRouter([
         element: <PrivateRoute><Stats /></PrivateRoute>,
       },
       {
+        path: 'addTask',
+        element: <PrivateRoute><AddTask></AddTask></PrivateRoute>,
+      },
+      {
         path: 'myTasks',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
         element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
+      },
+      {
+        path: 'updateTask/:id',
+        loader: ({ params }) => fetch(`https://fav-freelancer-server.vercel.app/tasks/${params.id}`),
+        element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
       },
       {
         path: 'myProfile',
