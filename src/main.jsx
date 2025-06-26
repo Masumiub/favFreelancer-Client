@@ -18,6 +18,9 @@ import BrowseTasks from './Pages/BrowseTasks';
 import MyTasks from './Pages/MyTasks';
 import ErrorPage from './Pages/ErrorPage';
 import ForgetPassword from './Pages/ForgetPassword';
+import DashBoardLayout from './Layouts/DashBoardLayout';
+import MyProfile from './Pages/MyProfile';
+import Stats from './Pages/Stats';
 
 const router = createBrowserRouter([
   {
@@ -33,28 +36,28 @@ const router = createBrowserRouter([
       },
       {
         path: '/addTask',
-        element: <PrivateRoute><AddTask></AddTask></PrivateRoute> ,
+        element: <PrivateRoute><AddTask></AddTask></PrivateRoute>,
       },
       {
         path: 'tasks/:id',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
-        element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute> ,
+        element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>,
       },
       {
         path: 'updateTask/:id',
         loader: ({ params }) => fetch(`https://fav-freelancer-server.vercel.app/tasks/${params.id}`),
-        element:  <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
+        element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
       },
       {
         path: '/browseTasks',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
         Component: BrowseTasks,
       },
-      {
-        path: '/myTasks',
-        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
-        element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
-      },
+      // {
+      //   path: '/myTasks',
+      //   loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
+      //   element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
+      // },
       {
         path: 'signin',
         element: <Signin></Signin>
@@ -69,6 +72,28 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/dashboard',
+    element: <PrivateRoute> <DashBoardLayout></DashBoardLayout></PrivateRoute>,
+    hydrateFallbackElement: <p className="text-center my-20"><span className="loading loading-spinner text-primary loading-xl"></span></p>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        index: true, 
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
+        element: <PrivateRoute><Stats /></PrivateRoute>,
+      },
+      {
+        path: 'myTasks',
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
+        element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
+      },
+      {
+        path: 'myProfile',
+        element: <PrivateRoute><MyProfile></MyProfile> </PrivateRoute>,
+      },
+    ]
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

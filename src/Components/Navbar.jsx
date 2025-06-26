@@ -1,5 +1,5 @@
 import React, { use, useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import './Navbar.css'
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from '../Context/AuthProvider';
@@ -82,7 +82,7 @@ const Navbar = () => {
                         <li> <NavLink to='/'>Home</NavLink> </li>
                         <li> <NavLink to='/addTask'>Add Task</NavLink> </li>
                         <li> <NavLink to='/browseTasks'>Browse Tasks</NavLink> </li>
-                        <li> <NavLink to='/myTasks'>My Tasks</NavLink> </li>
+                        {/* <li> <NavLink to='/myTasks'>My Tasks</NavLink> </li> */}
                     </ul>
                 </div>
                 <NavLink to='/' className="text-3xl font-bold ml-2 md:hidden"> <i><span className='text-green-500'>fav</span></i></NavLink>
@@ -93,7 +93,7 @@ const Navbar = () => {
                     <li> <NavLink to='/'>Home</NavLink> </li>
                     <li> <NavLink to='/addTask'>Add Task</NavLink> </li>
                     <li> <NavLink to='/browseTasks'>Browse Tasks</NavLink> </li>
-                    <li> <NavLink to='/myTasks'>My Tasks</NavLink> </li>
+                    {/* <li> <NavLink to='/myTasks'>My Tasks</NavLink> </li> */}
                 </ul>
             </div>
             <div className="navbar-end gap-3">
@@ -105,23 +105,6 @@ const Navbar = () => {
                     </label>
                 </div>
 
-                {/* {
-                    user ? <div className="avatar avatar-online">
-                        <div className="w-10 rounded-full">
-                            <img src={user.photoURL} title={user ? user.displayName : 'Anonymous'} />
-                        </div>
-                    </div> : <div className="avatar avatar-offline">
-                        <div className="w-10 rounded-full">
-                            <img src="https://static-00.iconduck.com/assets.00/avatar-default-icon-2048x2048-h6w375ur.png" title={user ? user.displayName : 'Anonymous'} />
-                        </div>
-                    </div>
-                }
-                {
-                    user ? <button onClick={handleLogout} className="btn rounded-full bg-green-500 text-white border-0">Signout</button> : <NavLink to='/signin' className="btn rounded-full  bg-green-500 text-white border-0">Signin</NavLink>
-                }
-                {
-                    user ? "" : <NavLink to='/signup' className="btn rounded-full">Register</NavLink>
-                } */}
 
                 {
                     user ? <div className="dropdown dropdown-end dropdown-hover"> <div className="btn btn-ghost btn-circle avatar">
@@ -137,6 +120,7 @@ const Navbar = () => {
                                 <p className='text-xl font-semibold'>{user.displayName}</p>
                                 <p>{user.email}</p>
                             </li>
+                            <li> <Link to='/dashboard' className="btn rounded-full bg-green-500 text-white border-0 btn-sm">Dashboard</Link></li>
                             <li className='py-2'><button onClick={handleLogout} className="btn rounded-full bg-green-500 text-white border-0 btn-sm">Signout</button></li>
                         </ul> </div> : <div className='flex gap-2'>
                         <NavLink to='/signin' className="btn rounded-full  bg-green-500 text-white border-0">Signin</NavLink>

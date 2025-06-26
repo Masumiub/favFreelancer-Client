@@ -65,7 +65,7 @@ const MyTasks = () => {
 
 
     return (
-        <div className='mx-auto w-full md:w-8/12'>
+        <div className='w-full'>
 
             <div className='flex flex-col md:flex-row items-center justify-between my-10 gap-10'>
                 <div className='w-full  md:w-8/12'>
@@ -74,45 +74,11 @@ const MyTasks = () => {
                 </div>
 
                 <div className='w-full md:w-4/12'>
-                    <img src={myTask} alt="browseTask" className='w-full' />
+                    <img src={myTask} alt="browseTask" className='w-full h-45' />
                 </div>
             </div>
 
             <div className='my-20'>
-                {/* {
-                    allTasks.length == 0 ? <h2 className='text-center text-4xl'>Sorry! You don't have any task now!  </h2> :
-                        allTasks.map((task) => <div key={task._id} className='bg-base-200 p-8 rounded-2xl shadow-md mb-10'>
-
-                            <h1 className='text-2xl font-bold'>{task.title}</h1>
-                            <div className='flex gap-2 mt-4'>
-                                <button className='btn btn-xs btn-primary rounded-full'>{task.category}</button>
-                                <button className='btn btn-xs rounded-full btn-outline'>Deadline: {task.deadline}</button>
-                            </div>
-
-                            <p className='text-gray-500 mt-6'>{task.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam at mollitia animi eveniet. Asperiores harum minima voluptatum pariatur fuga praesentium officia blanditiis delectus illum voluptatem.</p>
-
-
-                            <div className='flex flex-col md:flex-row md:justify-between mt-4'>
-
-                                <div>
-                                    <p className='font-semibold'>Posted By: {task.userName}</p>
-                                    <p className='text-xl mt-4 font-semibold'>Budget: ${task.budget}</p>
-                                </div>
-
-                                <div>
-                                    <NavLink to={`/tasks/${task._id}`} className='mt-4 btn bg-green-500 text-white  rounded-full border-0'>View Details</NavLink>
-                                </div>
-                            </div>
-                            <hr className='mt-3 border-1 border-gray-200' />
-                            <div className='flex gap-2 mt-4'>
-
-                                <Link className='btn btn-sm rounded-full' to={`/updateTask/${task._id}`}> <FaEdit /> Edit</Link>
-                                <Link className='btn btn-sm rounded-full' onClick={() => handleDeleteTask(task._id)}><MdDelete /> Delete</Link>
-                            </div>
-
-
-                        </div>)
-                } */}
 
                 <div className="overflow-x-auto">
                     <table className="table">
