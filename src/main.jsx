@@ -31,7 +31,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks?limit=6&sort=deadline'),
+        loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks?limit=8&sort=deadline'),
         Component: Home,
       },
       // {

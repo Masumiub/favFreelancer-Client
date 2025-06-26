@@ -33,7 +33,7 @@ const Home = () => {
             <div className='mx-auto w-full md:w-10/12'>
                 <div className='mt-20'>
                     <h2 className='font-bold text-5xl text-center'> <span className='text-green-500'>Featured</span> Tasks</h2>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20'>
                         {
                             tasks.map((task) => <Zoom cascade triggerOnce><div key={task._id} className='bg-base-200 p-8 rounded-2xl shadow-md'>
 
