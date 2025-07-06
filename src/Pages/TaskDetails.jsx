@@ -48,8 +48,8 @@ const TaskDetails = () => {
     }
 
     return (
-        <div className='w-full md:w-8/12 mx-auto'>
-            <div className='text-center bg-base-200 my-10 p-10 rounded-2xl'>
+        <div className='w-full md:w-10/12 mx-auto'>
+            <div className='text-center bg-base-200 my-25 p-10 rounded-2xl'>
                 <h2 className='text-4xl font-bold'>Task Details</h2>
             </div>
             <div className='mt-10 mb-25'>

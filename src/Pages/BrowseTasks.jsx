@@ -29,10 +29,10 @@ const BrowseTasks = () => {
     }, [searchTerm, selectedCategory, tasks]);
 
     return (
-        <div className='my-10 mx-auto w-full md:w-8/12'>
+        <div className='mt-25 mb-22 mx-auto w-full md:w-10/12'>
 
             <div className='flex flex-col md:flex-row items-center justify-between gap-10'>
-                <div className='w-full  md:w-8/12'>
+                <div className='w-full  md:w-10/12'>
                     <h2 className='font-bold text-5xl'>Browse Tasks </h2>
                     <p className='text-sm mt-3 text-gray-500'>Browse jobs posted on favFreelancer, or jump right in and create a free profile to find the work that you love to do.</p>
 

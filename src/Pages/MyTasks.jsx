@@ -106,7 +106,7 @@ const MyTasks = () => {
                                         <td><button className='btn btn-xs rounded-full' onClick={() => openModal(task) }>Show</button></td>
 
                                         <td className='flex flex-col md:flex-row gap-2'>
-                                            <Link className='btn btn-xs rounded-full' to={`updateTask/${task._id}`}> <FaEdit /> Edit</Link>
+                                            <Link className='btn btn-xs rounded-full' to={`/updateTask/${task._id}`}> <FaEdit /> Edit</Link>
                                             <Link className='btn btn-xs rounded-full' onClick={() => handleDeleteTask(task._id)}><MdDelete /> Delete</Link>
                                             <NavLink to={`/tasks/${task._id}`} className='btn btn-xs bg-green-500 text-white rounded-full border-0'>View</NavLink>
                                         </td>

@@ -87,7 +87,7 @@ const Signin = () => {
     }
 
     return (
-        <div className='flex flex-col-reverse md:flex-row items-center justify-around py-15 mb-30 gap-5 bg-base-200 rounded-2xl mt-4'>
+        <div className='flex flex-col-reverse md:flex-row items-center justify-around py-15 mb-30 gap-5 bg-base-200 rounded-2xl mt-25'>
             {/* <Helmet>
                 <title>Login | JobSeekers</title>
             </Helmet> */}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { Bounce, toast } from 'react-toastify';
-
+import img from '../assets/Service 24_7-bro.svg'
 const ContactUs = () => {
 
     const notifySuccess = (message) => {
@@ -28,12 +28,12 @@ const ContactUs = () => {
     };
 
     return (
-        <div className='bg-base-200 text-base-content py-20 px-6 md:px-20 min-h-screen'>
-            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12'>
+        <div className='bg-base-200 text-base-content min-h-screen mt-25'>
+            <div className='w-full md:w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 p-3 items-center'>
                 {/* Contact Info */}
                 <div>
-                    <h2 className='text-5xl font-bold mb-4 text-green-500'>Contact Us</h2>
-                    <p className='mb-6 text-lg'>
+                    <h2 className='text-5xl mb-4 font-bold'> <span className=' text-green-500'>Contact</span> Us</h2>
+                    <p className='mb-6'>
                         We’re on a mission to simplify how tasks are shared, managed, and completed —
                         empowering freelancers and clients through trust, technology, and collaboration.
                     </p>
@@ -89,6 +89,10 @@ const ContactUs = () => {
                             Send Message
                         </button>
                     </form>
+                </div>
+
+                <div>
+                    <img src={img} alt="service" className='w-full'/>
                 </div>
             </div>
         </div>

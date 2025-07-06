@@ -1,10 +1,13 @@
 import React from 'react';
 import { FaUsers, FaLaptopCode, FaHandshake, FaBolt, FaShieldAlt, FaHeart } from 'react-icons/fa';
+import img from '../assets/Typing-bro.svg'
+
 
 const AboutUs = () => {
     return (
-        <div className="bg-base-200 text-base-content px-4 py-20">
-            <div className="max-w-6xl mx-auto">
+        <div className="bg-base-200 text-base-content px-4 py-20 mt-25">
+
+            <div className="mx-auto w-full md:w-10/12">
 
                 {/* Heading */}
                 <h2 className="text-5xl font-bold text-center mb-4">
@@ -31,20 +34,20 @@ const AboutUs = () => {
                 </section>
 
                 {/* Core Values */}
-                <section className="mb-16">
-                    <h3 className="text-2xl font-semibold mb-8 text-center">Our Core Values</h3>
+                <section className="my-30">
+                    <h3 className="text-4xl font-semibold mb-8 text-center">Our Core Values</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="card bg-base-200 shadow-md p-6 rounded-xl text-center">
+                        <div className="card bg-base-200 shadow-md px-6 py-12 rounded-xl text-center ">
                             <FaBolt className="text-3xl text-green-500 mx-auto mb-4" />
                             <h4 className="font-semibold text-lg mb-2">Speed & Simplicity</h4>
                             <p className="">We design tools that are easy to use and fast to act on, so users can focus on what matters.</p>
                         </div>
-                        <div className="card bg-base-200 shadow-md p-6 rounded-xl text-center">
+                        <div className="card bg-base-200 shadow-md px-6 py-12  rounded-xl text-center">
                             <FaShieldAlt className="text-3xl text-green-500 mx-auto mb-4" />
                             <h4 className="font-semibold text-lg mb-2">Transparency & Trust</h4>
                             <p className="">We foster a reliable environment with fair rules, clear terms, and secure systems.</p>
                         </div>
-                        <div className="card bg-base-200 shadow-md p-6 rounded-xl text-center">
+                        <div className="card bg-base-200 shadow-md px-6 py-12  rounded-xl text-center">
                             <FaHeart className="text-3xl text-green-500 mx-auto mb-4" />
                             <h4 className="font-semibold text-lg mb-2">Empathy & Support</h4>
                             <p className="">We care about our community and actively support users with real human help.</p>
@@ -53,8 +56,9 @@ const AboutUs = () => {
                 </section>
 
                 {/* Why Choose Us */}
-                <section className="mb-20">
-                    <h3 className="text-2xl font-semibold mb-4">Why Choose Us</h3>
+                <div className='flex flex-col md:flex-row gap-12 items-center'>
+                <div className="w-full md:w-2/3">
+                    <h3 className="text-4xl font-semibold mb-4">Why Choose Us</h3>
                     <ul className="list-disc list-inside  space-y-2">
                         <li>✅ Simple and intuitive task posting and browsing</li>
                         <li>✅ Verified freelancers and trusted clients</li>
@@ -62,11 +66,17 @@ const AboutUs = () => {
                         <li>✅ Real-time notifications and communication tools</li>
                         <li>✅ Continuous improvements based on user feedback</li>
                     </ul>
-                </section>
+                </div>
+
+                <div className='w-full md:w-1/3'>
+                    <img src={img} alt="image" />
+                </div>
+                </div>
+
 
                 {/* Optional: Meet the Team */}
                 <section>
-                    <h3 className="text-2xl font-semibold mb-8 text-center">Meet the Team</h3>
+                    <h3 className="text-4xl font-semibold mb-8 text-center">Meet the Team</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
                         {[
                             { name: 'Masum Musfique', role: 'Frontend Developer', img: 'https://i.pravatar.cc/150?img=12' },

@@ -65,7 +65,7 @@ const Stats = () => {
             <div className="bg-gradient-to-bl from-white to-base-200 shadow-md p-6 rounded-xl mt-10">
                 <h2 className="text-xl font-semibold text-gray-700 mb-4">Bids per Task (My Tasks)</h2>
                 {chartData.length > 0 ? (
-                    <ResponsiveContainer width="100%" height={300}>
+                    <ResponsiveContainer width="100%" height={600}>
                         <BarChart data={chartData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
@@ -82,9 +82,9 @@ const Stats = () => {
                 )}
             </div>
 
-            <div className='mt-10'>
+            {/* <div className='mt-10'>
                 <MyTasks></MyTasks>
-            </div>
+            </div> */}
         </div>
     );
 };

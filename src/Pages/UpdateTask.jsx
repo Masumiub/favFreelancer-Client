@@ -78,9 +78,9 @@ const UpdateTask = () => {
 
     return (
         <div>
-            <div className='w-full'>
+            <div className='w-full md:w-10/12 mx-auto'>
 
-                <div className='flex flex-col md:flex-row items-center justify-between gap-10 mt-10'>
+                <div className='flex flex-col md:flex-row items-center justify-between gap-10 mt-25'>
                     <div className='w-full  md:w-8/12'>
                         <h2 className='font-bold text-5xl'>Update Task </h2>
                         {/* <p className='text-xs mt-2 text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores rem facere pariatur, blanditiis quidem fugit natus quia possimus illum deleniti adipisci voluptate dicta vel recusandae?</p> */}

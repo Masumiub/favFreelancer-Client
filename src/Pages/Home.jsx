@@ -18,7 +18,7 @@ const Home = () => {
     const tasks = useLoaderData();
 
     return (
-        <div>
+        <div className='mt-18'>
             <div className='headerSection'>
                 <div className='mx-auto w-full md:w-8/12'>
                     <Header></Header>

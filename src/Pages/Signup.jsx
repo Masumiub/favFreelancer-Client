@@ -131,7 +131,7 @@ const Signup = () => {
     }
 
     return (
-        <div className='flex flex-col-reverse md:flex-row items-center justify-around py-15 mb-30 gap-5 bg-base-200 rounded-2xl mt-4'>
+        <div className='flex flex-col-reverse md:flex-row items-center justify-around py-15 mb-30 gap-5 bg-base-200 rounded-2xl mt-25'>
 
             <div className='w-full md:w-1/2 flex justify-center mx-auto p-10'>
                 <img src={signupPic} alt="RegisterPic" className='w-full' />
