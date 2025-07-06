@@ -35,7 +35,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center justify-center'>
 
-                        <img src={banner1} alt="img" className='rounded-2xl  mt-10 mb-10' />
+                        <img src={banner1} alt="img" className='rounded-2xl  mt-10 mb-10 h-[50vh]' />
 
 
                     </div>
@@ -54,7 +54,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center justify-center'>
 
-                        <img src={banner2} alt="img" className='rounded-2xl  mt-10 mb-10' />
+                        <img src={banner2} alt="img" className='rounded-2xl  mt-10 mb-10 h-[50vh]' />
 
 
                     </div>
@@ -74,7 +74,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center justify-center'>
 
-                        <img src={banner3} alt="img" className='rounded-2xl mt-10 mb-10' />
+                        <img src={banner3} alt="img" className='rounded-2xl mt-10 mb-10 h-[50vh]' />
 
 
                     </div>

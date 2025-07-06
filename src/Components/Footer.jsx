@@ -17,6 +17,8 @@ const Footer = () => {
                 <nav>
                     
                     <NavLink to='/' className="text-3xl font-bold"> <i><span className='text-green-500'>fav</span></i> freelancer</NavLink>
+                    <p className='my-3'>We’re on a mission to simplify how tasks are shared, managed, and completed — <br />
+                        empowering freelancers and clients through trust, technology, and collaboration.</p>
                     <div className='flex items-center gap-2'>
                     <IoIosCall /> <p>+88 000 1111 2233 </p>
                     </div>
@@ -32,15 +34,16 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title">Company</h6>
                         <NavLink to='/'>Home</NavLink>
-                        <NavLink to='/addTask'>Add Task</NavLink> 
+                        <NavLink to='/dashboard/addTask'>Add Task</NavLink> 
                         <NavLink to='/browseTasks'>Browse Tasks</NavLink> 
-                        <NavLink to='/myTasks'>My Tasks</NavLink>
+                        <NavLink to='/dashboard/myTasks'>My Tasks</NavLink>
                 </nav>
                 <nav>
-                    <h6 className="footer-title">Legal</h6>
+                    <h6 className="footer-title">General</h6>
+                    <NavLink to='/aboutUs'>About Us</NavLink> 
                     <a className="link link-hover">Terms & conditions</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <NavLink to='/contactUs'>Contact Us</NavLink> 
+                    
                 </nav>
                 <form>
                     <h6 className="footer-title">Newsletter</h6>

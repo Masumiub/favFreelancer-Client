@@ -21,6 +21,8 @@ import ForgetPassword from './Pages/ForgetPassword';
 import DashBoardLayout from './Layouts/DashBoardLayout';
 import MyProfile from './Pages/MyProfile';
 import Stats from './Pages/Stats';
+import AboutUs from './Pages/AboutUs';
+import ContactUs from './Pages/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -34,30 +36,17 @@ const router = createBrowserRouter([
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks?limit=8&sort=deadline'),
         Component: Home,
       },
-      // {
-      //   path: '/addTask',
-      //   element: <PrivateRoute><AddTask></AddTask></PrivateRoute>,
-      // },
       {
         path: 'tasks/:id',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
         element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>,
       },
-      // {
-      //   path: 'updateTask/:id',
-      //   loader: ({ params }) => fetch(`https://fav-freelancer-server.vercel.app/tasks/${params.id}`),
-      //   element: <PrivateRoute><UpdateTask></UpdateTask></PrivateRoute>,
-      // },
+
       {
         path: '/browseTasks',
         loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
         Component: BrowseTasks,
       },
-      // {
-      //   path: '/myTasks',
-      //   loader: () => fetch('https://fav-freelancer-server.vercel.app/tasks'),
-      //   element: <PrivateRoute><MyTasks></MyTasks></PrivateRoute>,
-      // },
       {
         path: 'signin',
         element: <Signin></Signin>
@@ -69,6 +58,14 @@ const router = createBrowserRouter([
       {
         path: 'forgetPassword',
         element: <ForgetPassword></ForgetPassword>
+      },
+      {
+        path: '/aboutUs',
+        Component: AboutUs,
+      },
+      {
+        path: '/contactUs',
+        Component: ContactUs
       }
     ]
   },

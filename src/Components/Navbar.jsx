@@ -70,7 +70,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-base-100 mt-3">
+        <div className="navbar bg-base-100 mt-3 mx-auto w-full md:w-10/12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -80,9 +80,9 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li> <NavLink to='/'>Home</NavLink> </li>
-                        {/* <li> <NavLink to='/addTask'>Add Task</NavLink> </li> */}
                         <li> <NavLink to='/browseTasks'>Browse Tasks</NavLink> </li>
-                        {/* <li> <NavLink to='/myTasks'>My Tasks</NavLink> </li> */}
+                        <li><NavLink to='/aboutUs'>About us</NavLink></li>
+                        <li><NavLink to='/contactUs'>Contact us</NavLink></li>
                     </ul>
                 </div>
                 <NavLink to='/' className="text-3xl font-bold ml-2 md:hidden"> <i><span className='text-green-500'>fav</span></i></NavLink>
@@ -91,9 +91,9 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li> <NavLink to='/'>Home</NavLink> </li>
-                    {/* <li> <NavLink to='/addTask'>Add Task</NavLink> </li> */}
                     <li> <NavLink to='/browseTasks'>Browse Tasks</NavLink> </li>
-                    {/* <li> <NavLink to='/myTasks'>My Tasks</NavLink> </li> */}
+                    <li><NavLink to='/aboutUs'>About us</NavLink></li>
+                    <li><NavLink to='/contactUs'>Contact us</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end gap-3">
@@ -105,7 +105,9 @@ const Navbar = () => {
                     </label>
                 </div>
 
-
+                {
+                    user ?  <Link to='/dashboard' className="btn rounded-full bg-green-500 text-white border-0 btn-sm">Dashboard</Link> : ""
+                }
                 {
                     user ? <div className="dropdown dropdown-end dropdown-hover"> <div className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
@@ -120,13 +122,15 @@ const Navbar = () => {
                                 <p className='text-xl font-semibold'>{user.displayName}</p>
                                 <p>{user.email}</p>
                             </li>
-                            <li> <Link to='/dashboard' className="btn rounded-full bg-green-500 text-white border-0 btn-sm">Dashboard</Link></li>
+                            
                             <li className='py-2'><button onClick={handleLogout} className="btn rounded-full bg-green-500 text-white border-0 btn-sm">Signout</button></li>
                         </ul> </div> : <div className='flex gap-2'>
                         <NavLink to='/signin' className="btn rounded-full  bg-green-500 text-white border-0">Signin</NavLink>
                         <NavLink to='/signup' className="btn rounded-full">Register</NavLink>
                     </div>
                 }
+
+
 
             </div>
         </div>
